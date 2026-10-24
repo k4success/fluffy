@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gaozu Barbershop - Best Barbershop in Ajegunle</title>
+    
+    <style>
+
+
+              
+         .fav{width: 120px; border-radius: 50%;
+
+          }
+            .btn {
+              display: inline-block;   /* Makes it behave like a box */
+              background: #000;        /* Black background - looks classy */
+              color: #fff;             /* White text */
+              padding: 15px 30px;      /* Space inside: top/bottom 15px, left/right 30px */
+              text-decoration: none;   /* Removes the underline from the link */
+              border-radius: 8px;      /* Rounded corners */
+              font-weight: bold;       /* Make text bold */
+              margin-top: 20px;        /* Space above it */
+              margin-bottom: 20px;        /* Space above it */
+            }
+
+            .btn {
+              display: inline-block;   /* Makes it behave like a box */
+              background: #000;        /* Black background - looks classy */
+              color: #fff;             /* White text */
+              padding: 15px 30px;      /* Space inside: top/bottom 15px, left/right 30px */
+              text-decoration: none;   /* Removes the underline from the link */
+              border-radius: 8px;      /* Rounded corners */
+              font-weight: bold;       /* Make text bold */
+              margin-top: 20px;        /* Space above it */
+            }
+
+            .btn {
+              display: inline-block;
+              background: #FFD700;  /* Gold */
+              color: #000;          /* Black text */
+              padding: 15px 30px;
+              text-decoration: none;
+              border-radius: 8px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+
+            .btn:hover {
+              background: #FFC107; /* Slightly darker gold on hover */
+            }
+            body {
+              background: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400') no-repeat center fixed;
+              background-size: cover; /* Makes image cover whole screen */
+              font-family: Arial, sans-serif;
+              text-align: center;
+              padding: 10px;
+              margin: 0;
+              color: #fff; /* Make text white so it shows on dark image */
+            }
+
+          /* Add a dark overlay so text is readable */
+          body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); /* 60% black overlay */
+            z-index: -1;
+          }
+          
+          img {
+            max-width: 100%;  /* "Never be wider than your parent box" */
+            height: auto;     /* "Keep the proportions so it doesn't look squashed" */
+            border-radius: 10px; /* Make corners round. Looks pro */
+            margin-bottom: 15px;
+          }
+
+          .gallery {
+            display: flex;       /* Put images side by side */
+            gap: 10px;           /* Space between them */
+            flex-wrap: wrap;     /* On phone, they will drop to next line */
+          }
+
+          .gallery img {
+            flex: 1;             /* "Share the space equally" */
+            min-width: 150px;    /* "But never get smaller than 150px" */
+            border: 3px solid gold;
+          
+          }
+
+          .about-box, .price-box, .contact-box {
+            min-width: 100px;   /* "You can be 500px MAX, but shrink if needed" */
+            width: 90%;         /* "On small screens, be 90% of the screen" */
+            margin: 20px auto;  /* Still centered */
+            padding: 20px;
+          }
+
+          .about-box {
+            background-color: #FFC107;
+            border-radius: 10px;
+          }
+          
+          .about-box img { width: 100%}
+          
+          .price-box {
+            background-color: #006400; /* Royal Green */
+            color: white;
+            text-align: left;
+            margin-bottom: 25px;
+            border-radius: 10px;
+          }
+          
+          .contact-box {
+            background-color: black;
+            color: gold;
+            border-radius: 10px;
+          }
+          h1 {
+          color: #FFD700; /* Gold color - royal vibes */
+          font-size: 40px;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Makes it pop on the image */
+          margin-bottom: 10px;
+        }
+          
+          footer {
+          background: #000;
+          color: #ccc;
+          padding: 40px 0 0;
+          border-top: 3px solid #FFD700;
+        }
+
+        .footer-container {
+          max-width: 100%; /* stops it from getting too wide on desktop */
+          margin: 0 auto;
+          padding: 0 20px;
+          
+          display: grid;
+          grid-template-columns: 1fr; /* MOBILE FIRST: 1 column */
+          gap: 30px;
+          text-align: center; /* center everything on mobile */
+        }
+
+        .footer-col h3 {
+          color: #FFD700;
+          margin-bottom: 12px;
+          font-size: 18px;
+        }
+
+        .footer-col {
+          font-size: 14px;
+          line-height: 1.7;
+          margin-bottom: 8px;
+        }
+
+        .footer-btn {
+          display: inline-block;
+          background: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-size: 14px;
+          margin-top: 8px;
+          transition: 0.3s;
+        }
+
+        .footer-btn.gold {
+          background: #FFD700;
+          color: #000;
+          font-weight: bold;
+        }
+
+        .footer-btn:hover {
+          opacity: 0.8;
+        }
+
+        .social-links a {
+          display: inline-block;
+          margin: 0 10px;
+          color: #ccc;
+          text-decoration: none;
+          font-size: 14px;
+        }
+
+        .social-links a:hover {
+          color: #FFD700;
+        }
+
+
+        /* DESKTOP: Switch to 3 columns */
+        @media (min-width: 768px) {
+          .footer-container {
+            grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+            text-align: center; /* align left on desktop */
+          }
+          .footer-col:nth-child(2) { text-align: center; } /* middle column center */
+          .footer-col:nth-child(3) { text-align: center; } /* right column right */
+        }
+    </style>
+    </head>
+    <body>
+        <a href="https://wa.me/2348135669461" target="_blank" class="btn">Book Appointment</a>
+          <div>
+            <div class="upper">
+            <img src="https://static.vecteezy.com/system/resources/previews/074/715/654/non_2x/rb-green-logo-fruit-template-vector.jpg" class="fav" alt="Royal Barbers Logo">
+            </div>
+            
+            <h1>Welcome to Gaozu Barbershop</h1>
+            <p>The King of Fresh Cuts</p>
+          </div>
+
+          <!-- ABOUT SECTION -->
+          <div class="about-box">
+            <h2>About Us</h2>
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=500" 
+            alt="Professional barber cutting hair">
+          </div>
+        
+        
+          <h2>Our Work</h2>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400" alt="Haircut 1">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400" alt="Haircut 2">
+            <img src="https://images.unsplash.com/photo-1562693314-46860c82db14?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Haircut 3">
+        </div>
+            
+              <p>We give the freshest fades in Ajegunle.<br>
+              <em>Walk-ins welcome.</em></p>
+
+            <!-- PRICE SECTION -->
+              <div class="price-box">
+                <h2>Price List</h2>
+                <ul>
+                  <li>Normal Cut - <strong>₦2000</strong></li>
+                  <li>Beard Trim - <strong>₦1500</strong></li>
+                  <li>Kids Cut - <strong>₦1500</strong></li>
+                  <li>Full Grooming - <strong>₦4000</strong></li>
+                  <li>Baby Cut - <strong>₦3000</strong></li>
+                  <li>Cut & Dye - <strong>₦3000</strong></li>
+                  <li>Home Service - <strong>₦3000</strong></li>
+                </ul>
+              </div>
+
+          <!-- CONTACT SECTION -->
+          <div class="contact-box">
+            <h2>Contact Us</h2>
+            <a href="tel:+2348135669461">📞 Call Us: 0801 234 5678</a>
+            <br>
+            <a href="https://wa.me/2349057502633">💬 Chat on WhatsApp</a><br>
+            <p>Thanks for coming</p>
+          </div>
+        
+
+          <div class="footer-container">
+          
+              <!-- COLUMN 1 -->
+              <div class="footer-col">
+                  <h3>Address</h3>
+                  <p>WM67+4H2, Oshogbo - Ikirun Rd<br>Ikirun, Osun</p>
+                  <a href="tel:+2348135669461" class="footer-btn">📞 Call Us</a>
+              </div>
+          
+                <!-- COLUMN 2 -->
+              <div class="footer-col">
+                <h3>Hours</h3>
+                <p>Mon - Sat: 9am - 9pm</p>
+                <p>Sunday: 10am - 6pm</p>
+                <a href="https://maps.app.goo.gl/KFUX1MM8pWjWFf5b7" target="_blank" class="footer-btn gold">📍 Directions</a>
+              </div>
+          
+                  <!-- COLUMN 3 -->
+              <div class="footer-col">
+                <h3>Connect</h3>
+                  <div class="social-links">
+                    <a href="https://wa.me/2348135669461" target="_blank">WhatsApp</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                  </div>
+              </div>
+            </div>
+    </body>
+   </html>
